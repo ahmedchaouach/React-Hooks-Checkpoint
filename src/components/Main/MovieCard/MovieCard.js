@@ -1,9 +1,11 @@
 import React from "react";
-import './MovieCard.css'
-import Rate from '../../Rate'
+import './MovieCard.css';
+import Rate from '../../Rate';
+import {Link} from 'react-router-dom';
 
 const MovieCard = ({movie}) => {
   return (
+    <Link to={`/Movie/ ${movie.id} `}>
     <div className="container">
       <div className="movie">
         <div className="movie-rating">
@@ -35,6 +37,8 @@ const MovieCard = ({movie}) => {
         </div>
       </div>
     </div>
+    </Link>
+    
   );
 };
 

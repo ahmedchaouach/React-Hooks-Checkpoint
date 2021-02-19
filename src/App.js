@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
 import Header from "./components/Main/Header/Header";
 import Main from "./components/Main/Main";
 import { moviesData } from "./moviesData";
+import AppRouter from "./Router/AppRouter";
 
 function App() {
   const [movies, setMovies] = useState(moviesData);
@@ -14,6 +16,7 @@ function App() {
   };
   return (
     <div className="App">
+      
       <Header
         setSearchName={setSearchName}
         setSearchRate={setSearchRate}
